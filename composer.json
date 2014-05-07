@@ -1,0 +1,19 @@
+{
+    "name": "reekoheek/migrate",
+    "description": "Migration tool for bono",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ganesha",
+            "email": "reekoheek@gmail.com"
+        }
+    ],
+    "require": {
+        "reekoheek/util": ">=0.1.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Xinix\\Migrate": "src/"
+        }
+    }
+}

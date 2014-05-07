@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "6b216af3a0483e41308932a602238b67",
+    "packages": [
+        {
+            "name": "reekoheek/util",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reekoheek/php-util.git",
+                "reference": "62d2608bb4530efcf8f68b2de8bb6af0820f1fa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reekoheek/php-util/zipball/62d2608bb4530efcf8f68b2de8bb6af0820f1fa0",
+                "reference": "62d2608bb4530efcf8f68b2de8bb6af0820f1fa0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ROH\\Util": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ganesha",
+                    "email": "reekoheek@gmail.com",
+                    "homepage": "http://xinix.co.id",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP util library",
+            "time": "2014-01-02 04:08:44"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
