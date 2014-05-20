@@ -16,7 +16,7 @@ class MigrateProvider extends \Bono\Provider\Provider
         ), $this->options ?: array());
 
         if ($app->config('bono.cli') !== true) {
-            if (is_null($this->options['token'])) {
+            if (empty($this->options['token'])) {
                 return;
             }
 
@@ -28,16 +28,21 @@ class MigrateProvider extends \Bono\Provider\Provider
             $app->theme->addBaseDirectory($d[0]);
         }
 
-        $app->get('/migrate', function() use ($app) {
+        $app->get('/migrate', function () use ($app) {
             $app->redirect('/migrate/show?token='.$app->request->get('token'));
         });
 
-        $app->get('/migrate/show', function() use ($app, $migrate) {
+        $app->get('/migrate/show', function () use ($app, $migrate) {
             $entries = $migrate->find();
 
             if ($app->config('bono.cli')) {
                 foreach ($entries as $entry) {
-                    $l = sprintf("| %-45s | %s | %s |\n", substr($entry['title'], 0, 45), $entry['time']->format('Y-m-d H:i:s'), $entry['status']);
+                    $l = sprintf(
+                        "| %-45s | %s | %s |\n",
+                        substr($entry['title'], 0, 45),
+                        $entry['time']->format('Y-m-d H:i:s'),
+                        $entry['status']
+                    );
                     echo $l;
                 }
             } else {
